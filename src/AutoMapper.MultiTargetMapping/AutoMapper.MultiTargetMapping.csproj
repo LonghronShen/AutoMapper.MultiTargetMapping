@@ -1,0 +1,46 @@
+﻿<Project Sdk="MSBuild.Sdk.Extras">
+
+  <PropertyGroup>
+    <TargetFrameworks>net35;net40;net471;netstandard1.1;netstandard2.0;portable-net45+win8+wpa81;portable-net4+sl50+win8+wpa81+wp8</TargetFrameworks>
+    <VersionPrefix>1.0</VersionPrefix>
+    <PackageId>AutoMapper.MultiTargetMapping</PackageId>
+    <Description>Multi-target mapper for AutoMapper.</Description>
+    <Company>LonghronShen</Company>
+    <Authors>LonghronShen</Authors>
+    <Copyright>Copyright ©LonghronShen 2019</Copyright>
+    <PackageTags>AutoMapper;Portable;Dynamic;Tuple;Multi;Target</PackageTags>
+    <PackageProjectUrl>https://github.com/LonghronShen/AutoMapper.MultiTargetMapping</PackageProjectUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/LonghronShen/AutoMapper.MultiTargetMapping/master/LICENSE</PackageLicenseUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/LonghronShen/AutoMapper.MultiTargetMapping.git</RepositoryUrl>
+    <IncludeSymbols Condition=" '$(Configuration)' == 'Debug' ">True</IncludeSymbols>
+    <IncludeSource Condition=" '$(Configuration)' == 'Debug' ">True</IncludeSource>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'portable-net45+win8+wpa81' ">
+    <DefineConstants>$(DefineConstants);PORTABLE;PROFILE_111</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'portable-net4+sl50+win8+wpa81+wp8' ">
+    <DefineConstants>$(DefineConstants);PORTABLE;PROFILE_328</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net40' OR '$(TargetFramework)' == 'net471' OR '$(TargetFramework)' == 'portable-net45+win8+wpa81' OR '$(TargetFramework)' == 'portable-net4+sl50+win8+wpa81+wp8' ">
+    <PackageReference Include="AutoMapper" Version="3.2.1" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net35' ">
+    <PackageReference Include="AutoMapper" Version="1.1.2" />
+    <PackageReference Include="NetLegacySupport.Tuple" Version="1.1.1" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.1' OR '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="AutoMapper" Version="5.0.2" />
+    <PackageReference Include="System.Runtime" Version="4.3.0" />
+    <PackageReference Include="System.Reflection" Version="4.3.0" />
+    <PackageReference Include="System.Dynamic.Runtime" Version="4.3.0" />
+  </ItemGroup>
+
+</Project>
