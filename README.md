@@ -1,6 +1,7 @@
 # AutoMapper.MultiTargetMapping
 
 [![Build status](https://ci.appveyor.com/api/projects/status/tgvc6o5xwqop5dbs?svg=true)](https://ci.appveyor.com/project/LonghronShen/automapper-multitargetmapping)
+![Nuget](https://img.shields.io/nuget/dt/Sprintor.AutoMapper.MultiTargetMapping.svg)
 
 A simple multi-target mapping enhancement for *AutoMapper*.
 
@@ -73,7 +74,7 @@ var (b3, b4, c1) = MultiTargetMapper.Map<Tuple<BModel, BModel, CModel>>(this.Sou
 
 Since the predefined `System.Tuple` can hold no more than 8 items, we provide a way to make a dynamic object which contains what you want.
 
-Sadly, since the dynamically created object's type is only kwnown at runtime,and the destruction assignment syntax just works in compilation time, we cannot use a strongly-typed way to do so.
+Sadly, since the dynamically created object's type is only known at runtime,and the destruction assignment syntax just works in compilation time, we cannot use a strongly-typed way to do so.
 
 ```C#
 // If you want to map as many as possible destinations, do like this.

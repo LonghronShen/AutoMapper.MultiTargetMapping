@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>net35;net40;net471;netstandard1.1;netstandard2.0;portable-net45+win8+wpa81;portable-net4+sl50+win8+wpa81+wp8</TargetFrameworks>
     <VersionPrefix>1.0</VersionPrefix>
-    <PackageId>AutoMapper.MultiTargetMapping</PackageId>
+    <PackageId>Sprintor.AutoMapper.MultiTargetMapping</PackageId>
     <Description>Multi-target mapper for AutoMapper.</Description>
     <Company>LonghronShen</Company>
     <Authors>LonghronShen</Authors>
