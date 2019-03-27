@@ -1,7 +1,7 @@
 # AutoMapper.MultiTargetMapping
 
 [![Build status](https://ci.appveyor.com/api/projects/status/tgvc6o5xwqop5dbs?svg=true)](https://ci.appveyor.com/project/LonghronShen/automapper-multitargetmapping)
-![Nuget](https://img.shields.io/nuget/dt/Sprintor.AutoMapper.MultiTargetMapping.svg)
+[![NuGet Badge](https://buildstats.info/nuget/Sprintor.AutoMapper.MultiTargetMapping)](https://www.nuget.org/packages/Sprintor.AutoMapper.MultiTargetMapping/)
 
 A simple multi-target mapping enhancement for *AutoMapper*.
 
@@ -58,7 +58,7 @@ var c = Mapper.Map<AModel, CModel>(source);
 ...
 ```
 
-Repeating these codes are so boring.
+Repeating these codes is so boring.
 
 With the help of `System.Tuple` and `Destruction assignment in C# 7` features, using this library, we can now wrap things up to:
 
