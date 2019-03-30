@@ -65,7 +65,8 @@ With the help of `System.Tuple` and `Destruction assignment in C# 7` features, u
 ```C#
 var (b1, b2) = MultiTargetMapper.Map<Tuple<BModel, BModel>>(this.Source);
 
-// Now b1 and b2 are newly constructed objects which are converted from the source object using AutoMapper, and they are both of type BMdoel.
+// Now b1 and b2 are newly constructed objects which are converted from the source object using AutoMapper, 
+// and they are both of type BMdoel.
 
 // No more than 8 items are OK using this way.
 var (b3, b4, c1) = MultiTargetMapper.Map<Tuple<BModel, BModel, CModel>>(this.Source);
@@ -82,7 +83,7 @@ Sadly, since the dynamically created object's type is only known at runtime,and 
 var destination = MultiTargetMapper.MapDynamic(this.Source,
     typeof(BModel), typeof(BModel), typeof(CModel), typeof(CModel));
 
-// The destination object is of dynamic type, so we cannot do a destuction over it to make new variables.
+// The destination object is of dynamic type, so we cannot do a destruction over it to make new variables.
 ```
 
 **Note**: The `dynamic` feature is only available on *.NET Framework 4.0*, *.NET Standard 1.1*, *.NET Standard 2.0* and *Portable Class Library, portable-net45+win8+wpa81, Profile 111*.
@@ -92,7 +93,8 @@ For more general scenarios, we also provide a batch mapping method:
 ```C#
 var destinations = MultiTargetMapper.Map(this.Source, typeof(BModel), typeof(BModel), typeof(CModel), typeof(CModel));
 
-// The destinations object is of IList<object>. You can iterate the collection to fetch each destination object. Ordering is the same as the given types array.
+// The destinations object is of IList<object>. You can iterate the collection to fetch each destination object.
+// Ordering is the same as the given types array.
 ```
 
 ## Platform Support
